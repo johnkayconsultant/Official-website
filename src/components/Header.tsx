@@ -1,19 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import website_logo from "../assets/website_logo.png";
 import { Button } from '@base-ui/react/button';
 import {Menu, X} from "lucide-react";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen]= useState(false);
+    const location = useLocation();
 
     const navLink = [
         {label:"Home", href:"/"},
         {label:"Services", href:"/Services"},
         {label:"About", href:"/About"},
         {label:"Contact", href:"/Contact"}
-    ]
+    ];
+
+         // Scroll to the top whenever the active navigation route changes
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+
+    // Close mobile menu after navigation
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
+  const isActive = (href: string) => {
+    if (href === "/") return location.pathname === "/";
+
+    return location.pathname.startsWith(href);
+  };
+    
   return (
     <header className="fixed top-0 left-0 right-0 w-full py-5 px-5 md:px-10 lg:px-20 bg-accent">
         <div className="flex items-center justify-between h-15"> 
