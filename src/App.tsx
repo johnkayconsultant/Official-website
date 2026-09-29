@@ -9,7 +9,7 @@ import Notfound from "./pages/Notfound";
 import BusinessNameRegistration from "./components/BusinessNameRegistration";
 import CompanyNameRegistration from "./components/CompanyNameRegistration";
 import NgoRegistration from "./components/NgoRegistration";
-// import WhatsaAppButton from "./components/WhatsaAppButton";
+import WhatsaAppButton from "./components/WhatsaAppButton";
 
 
  
@@ -26,9 +26,9 @@ function App() {
       <Route path="/Contact" element={<Contact/>}/>
       <Route path="/About" element={<About/>}/>
       <Route path="/BusinessNameRegistration" element={<BusinessNameRegistration />} />
-      <Route path="/company-registration" element={<CompanyNameRegistration />} /> 
+      <Route path="/CompanyNameRegistration" element={<CompanyNameRegistration />} /> 
       <Route path="/ngo-registration" element={<NgoRegistration />} />
-      {/* <Route path="/WhatsaAppButton" element={<WhatsaAppButton/>}/> */}
+      <Route path="/WhatsaAppButton" element={<WhatsaAppButton/>}/>
 
 
       {/* //NOT FOUND PAGE */}

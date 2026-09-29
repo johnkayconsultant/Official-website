@@ -26,7 +26,7 @@ const BusinessNameRegistration = () => {
 
     <div className="mt-15">
       <Link to="/WhatsAppButton">
-    <span className="bg-amber-400 p-2 rounded-xl font-extrabold shadow-amber-600 hover:bg-blue-600">
+    <span className="bg-amber-400 p-5 rounded-xl font-extrabold shadow-amber-600 hover:bg-blue-600">
       <button type="submit">
           <div className='inline-flex gap-2'>
             <div>START MY APPLICATION
@@ -37,7 +37,7 @@ const BusinessNameRegistration = () => {
     </span>
     </Link>
     </div>
-          <div className='inline-flex gap-2 mt-5'>
+          <div className='inline-flex gap-2 mt-12'>
             <div>
               <Check />
           </div>
@@ -69,7 +69,7 @@ const BusinessNameRegistration = () => {
                   <div className="bg-amber-100 p-2 rounded-xl">
                       <ShieldCheck className='w-7 h-7'/>
                     <h4 className="font-extrabold mt-3">Name Theft</h4>
-                    <p>Anyone can register your brand name today. The CAC operates strictly on a "first to file" basis.</p>
+                    <p className="mt-3">Anyone can register your brand name today. The CAC operates strictly on a "first to file" basis.</p>
                   </div>
                 </div>
               </div>
