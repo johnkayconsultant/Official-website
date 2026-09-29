@@ -3,6 +3,8 @@ import Header from '@/components/Header'
 import React from 'react'
 import { BriefcaseBusiness,Briefcase } from 'lucide-react';
 import adsvideo from "../assets/adsvideo.mp4";
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 const Services = () => {
   return (
@@ -39,26 +41,61 @@ const Services = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
 
             {/* business name */}
-          <div className="mt-10  bg-blue-200 border-b-4 p-8 rounded-4xl">
-            <BriefcaseBusiness className='w-10 h-10'/>
-            <h4 className="text-xl mt-4 font-extrabold">Business Name Registration</h4>
-            <p className='mt-4'>The fastest and most affordable way to formalize your business. Protect your brand name and open a corporate bank account as a Sole Proprietor or Partnership with a CAC Business Name certificate.</p>
-          </div>
+            <Link to="/businessNameRegistration">
+          <div className="mt-10  bg-blue-200 border-b-4 p-8 rounded-4xl hover:bg-blue-300
+    hover:shadow-xl hover:-translate-y-1 hover:scale-100">
+      
+                    <BriefcaseBusiness className='w-10 h-10'/>
+                    <h4 className="text-xl mt-4 font-extrabold">Business Name Registration</h4>
+                    <p className='mt-4'>The fastest and most affordable way to formalize your business. Protect your brand name and open a corporate bank account as a Sole Proprietor or Partnership with a CAC Business Name certificate.</p>
+                    <div className="mt-2 flex md:flex-row gap-3">
+                      <div className='font-bold text-white'>
+                          View Service detail
+                      </div>
+                      <div className="mt-1">
+                        
+                          <ArrowRight className='w-25 h-5' />
+                    
+                      </div>
+                    </div>
+                  </div>
+                  </Link>
 
           {/* Register a Limited Company (LLC) */}
-          <div className="mt-10 bg-amber-200 border-b-4 p-8 rounded-4xl">
+          <Link to="/CompanyNameRegistration">
+          <div className="mt-10 bg-amber-200 border-b-4 p-8 rounded-4xl hover:bg-blue-300 hover:shadow-xl hover:-translate-y-1 hover:scale-100">
             <Briefcase className='w-10 h-10'/>
             <h4 className="text-xl mt-4 font-extrabold">Register a Limited Company (LLC)</h4>
             <p className='mt-4'>Protect your personal assets, secure massive government contracts, and attract global investors with a Private Limited Liability Company.</p>
+            <div className='mt-4 flex md:flex-row gap-3'>
+                <div className='font-bold text-white'>
+                          View Service detail
+                      </div>
+                      <div className="mt-1">
+                        
+                          <ArrowRight className='w-25 h-5' />
+                    
+                      </div>
+            </div>
           </div>
+          </Link>
 
           {/* Incorporated Trustees Experts */}
-          <div className="mt-10  bg-green-200 border-b-4 p-8 rounded-4xl">
+          <Link to="/NgoRegistration">
+              <div className="mt-10  bg-green-200 border-b-4 p-8 rounded-4xl">
             <Briefcase className='w-10 h-10' />
             <h4 className="text-xl mt-4 font-extrabold">Incorporated Trustees</h4>
             <p className='mt-4'>Establish your Foundation, NGO, Church, Mosque, or Association legally in Nigeria as Incorporated Trustees. We handle the complex newspaper publications and Trustee verifications so you can focus on your mission.</p>
+            <div className='mt-4 flex md:flex-row gap-3'>
+                <div className='font-bold text-white'>
+                          View Service detail
+                      </div>
+                      <div className="mt-1">
+                          <ArrowRight className='w-25 h-5' />
+                      </div>
+            </div>
           </div>
-
+          </Link>
           {/* Accredited CAC Annual Returns Filing */}
           <div className="mt-10  bg-amber-200 border-b-4 p-8 rounded-4xl">
             <Briefcase className='w-10 h-10'/>

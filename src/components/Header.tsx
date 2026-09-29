@@ -3,18 +3,35 @@ import { useState } from 'react';
 import {Link, useLocation} from "react-router-dom";
 import website_logo from "../assets/website_logo.png";
 import { Button } from '@base-ui/react/button';
-import {Menu, X} from "lucide-react";
+import {Menu, X, ChevronDown} from "lucide-react";
 
 const Header = () => {
+    // Controls the main mobile menu
     const [isMenuOpen, setIsMenuOpen]= useState(false);
     const location = useLocation();
+    // Controls the Services dropdown on mobile
+    const [isServicesOpen, setIsServicesOpen] = useState(false);
 
+        // Main navigation links
     const navLink = [
         {label:"Home", href:"/"},
-        {label:"Services", href:"/Services"},
+        // {label:"Services", href:"/Services"},
         {label:"About", href:"/About"},
         {label:"Contact", href:"/Contact"}
     ];
+
+    // Services dropdown links
+    const services=[
+            { label: "All Services Render", href: "/Services" }, 
+                { label: "Business Registration", href: "/BusinessNameRegistration" }, 
+                { label: "Company Registration", href: "/CompanyNameRegistration" }, 
+                { label: "NGO Registration", href: "/ngo-registration" }
+    ];
+
+    // Close mobile menu 
+    const closeMobileMenu = () => { setIsMenuOpen(false);
+         setIsServicesOpen(false);};
+
 
          // Scroll to the top whenever the active navigation route changes
   useEffect(() => {
@@ -57,7 +74,51 @@ const Header = () => {
                   </Link>
 
                 ))}
-             </nav>
+
+               {/* SERVICES DROPDOWN */}
+<div className="relative group flex items-center">
+
+    {/* SERVICES PAGE LINK */}
+    <Link
+        to="/Services"
+        className="hover:text-amber-500 font-extrabold"
+    >
+        Services
+    </Link>
+
+    {/* DROPDOWN ARROW */}
+    <button
+        type="button"
+        className="ml-1 hover:text-amber-500"
+    >
+        <ChevronDown size={18} />
+    </button>
+
+
+    {/* DROPDOWN */}
+    <div className="absolute left-0 top-full mt-2 hidden group-hover:block bg-white shadow-lg rounded-lg w-64 py-2">
+
+        {services.map((service) => (
+            <Link
+                key={service.label}
+                to={service.href}
+                className="block px-4 py-3 font-semibold hover:bg-gray-100 hover:text-amber-500"
+            >
+                {service.label}
+            </Link>
+        ))}
+
+    </div>
+
+</div>
+</nav>
+
+
+
+                               
+
+
+
 
              {/* CTA BUTTON */}
              <div className="hidden md:block">
@@ -90,6 +151,52 @@ const Header = () => {
                             {link.label}
                         </Link>
                     ))}
+                
+                <div>
+
+                <button
+                    type="button"
+                    className="w-full flex items-center justify-between px-5 font-bold hover:text-amber-500"
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                >
+                    <span>Services</span>
+
+                    <ChevronDown
+                        size={20}
+                        className={`transition-transform ${
+                            isServicesOpen ? "rotate-180" : ""
+                        }`}
+                    />
+                </button>
+
+
+                {/* MOBILE SERVICES DROPDOWN */}
+                {isServicesOpen && (
+
+                    <div className="mt-2 ml-5 flex flex-col gap-2 border-l-2 border-green-500">
+
+                        {services.map((service) => (
+
+                            <Link
+                                key={service.label}
+                                to={service.href}
+                                className="px-4 py-2 font-semibold hover:text-amber-500"
+                                onClick={closeMobileMenu}
+                            >
+                                {service.label}
+                            </Link>
+
+                        ))}
+
+                    </div>
+
+                )}
+
+            </div>
+
+
+
+
                     <Link to="/About">
                     <Button className="bg-green-500 text-white rounded font-bold p-3 cursor:pointer ">
                         SEND A MESSAGE
