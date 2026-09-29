@@ -1,5 +1,5 @@
 import React from 'react';
-import { House,ArrowRight } from 'lucide-react';
+import { House,ArrowRight,ShieldCheck,ChartNoAxesCombined,Landmark  } from 'lucide-react';
 import Header from '@/components/Header';
 import WhatsaAppButton from "@/components/WhatsaAppButton";
 import {Link} from "react-router-dom";
@@ -38,10 +38,37 @@ const CompanyNameRegistration = () => {
                             {/* level 2 */}
                       <div className="py-20 bg-amber-50">
                         <div className="px-5 md:px-10 lg:px-20">
+
+                          {/* for half of the width */}
                               <div className="lg:w-1/2">
                                 <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-green-800">WHY AN LLC IS BETTER THAN BUSINESS A NAME </h1>
                               <p className="mt-5">If you plan to scale, hire employees, or raise capital, an LLC is mandatory. Unlike a Business Name, an LLC is a separate legal entity from you (the founder).</p>
                          <p className="mt-3">Limited Liability Your personal assets (house, car, personal bank accounts) are completely protected if the business incurs debt or faces legal issues.</p>
+                              </div>
+
+                              <div className="grid grid-col md:grid-cols-3 gap-10 mt-10">
+                                <div className='rounded-xl bg-white p-4'>
+                                  <ShieldCheck />
+                                  <h4 className="font-bold mt-3">LIMITED LIABILITY</h4>
+                                  <p className="mt-3">Your personal assets (house, car, personal bank accounts) are completely protected if the business incurs debt or faces legal issues.</p>
+                                  </div>
+
+
+                                  <div className='rounded-xl bg-white p-4'>  
+                                    <ChartNoAxesCombined />
+                                    <h4 className="font-bold mt-3">ATTRACT INVESTORS</h4>
+                                    <p className="mt-3">Angel investors and VCs will only invest in an LLC because it has shares that can be legally transferred and allocated.</p>
+                                    </div>
+
+
+                                <div className='rounded-xl bg-white p-4'>
+                                     <Landmark />
+                                     <h4 className="font-bold mt-3">LARGE CONTRACTS</h4>
+                                     <p className="mt-3">Government agencies and multinational corporations often have strict policies requiring vendors to be Limited Companies.</p>
+
+
+                                </div>
+
                               </div>
                         </div>
                 
