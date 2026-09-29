@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import { Handshake,ArrowRight  } from 'lucide-react';
 import {Link} from "react-router-dom";
 import WhatsaAppButton from "../components/WhatsaAppButton";
+import { HandCoins } from 'lucide-react';
+ import { ShieldPlus,Globe } from 'lucide-react';
 
 const NgoRegistration = () => {
   return (
@@ -51,14 +53,32 @@ const NgoRegistration = () => {
                 <h1 className="font-extrabold text-xl md:text-2xl lg:text-4xl text-green-500">WHY REGISTER AS INCORPORATED TRUSTEES</h1>
                 <p className="mt-4">In Nigeria, non-profit organizations cannot be registered as standard Limited Liability Companies. They must be registered under Part F of CAMA as Incorporated Trustees. This provides legal backing for your charitable or religious activities.</p>
                 </div>
-                </div>
 
-                {/* col */}
+                      {/* col */}
                       <div className="mt-10 grid grid-col md:grid-cols-3">
-                        <div>box1</div>
+                            {/* box 1 */}
+                        <div>
+                          <HandCoins />
+                          <h4>RECIEVE GRANT</h4>
+                          <p>International donors and government agencies only fund legally recognized NGOs with an official CAC certificate and corporate bank account.</p>
+                        </div>
+                         {/* box 2 */}
+                        <div>
+                          <ShieldPlus />
+                          <h4>LEGAL PROTECTION</h4>
+                          <p>The Trustees gain limited liability protection, meaning their personal assets are protected while executing the organization's goals.</p>
+                        </div>
 
+                         {/* box 3 */}
+                        <div>
+                           <Globe />
+                           <h4>PUBLIC TRUST</h4>
+                           <p>Having a CAC certificate immediately builds immense trust with the public, volunteers, and potential financial partners.</p>
+                        </div>
                       </div>
 
+
+                </div>
             </div>
              
     <Footer/>
