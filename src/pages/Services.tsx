@@ -62,7 +62,7 @@ const Services = () => {
                   </Link>
 
           {/* Register a Limited Company (LLC) */}
-          <Link to="/CompanyNameRegistration">
+          <Link to="/company-registration">
           <div className="mt-10 bg-amber-200 border-b-4 p-8 rounded-4xl hover:bg-blue-300 hover:shadow-xl hover:-translate-y-1 hover:scale-100">
             <Briefcase className='w-10 h-10'/>
             <h4 className="text-xl mt-4 font-extrabold">Register a Limited Company (LLC)</h4>
