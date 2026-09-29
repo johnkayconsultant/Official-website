@@ -18,7 +18,7 @@ const NgoRegistration = () => {
           <div className="font-extrabold">
             Incorporated Trustees Experts
           </div>
-        </div>
+          </div>
 
               <div className="mt-10">
                 <h1 className="text-2xl md:text-7xl lg:text-7xl font-bold">Register Your NGO or Church with CAC</h1>
@@ -40,8 +40,26 @@ const NgoRegistration = () => {
                         </Link>
                       </div>
                 
-                </div>
+                </div> 
           </div>
+
+                    {/* LEVEL 2 */}
+            <div className="py-20 bg-amber-50">
+              <div className="px-5 md:px-10 lg:px-20">
+                {/* FOR HALF OF THE WIDTH ONE SIDE IS LOADED WITH INFORMATION */}
+                <div className="lg:w-1/2">
+                <h1 className="font-extrabold text-xl md:text-2xl lg:text-4xl text-green-500">WHY REGISTER AS INCORPORATED TRUSTEES</h1>
+                <p className="mt-4">In Nigeria, non-profit organizations cannot be registered as standard Limited Liability Companies. They must be registered under Part F of CAMA as Incorporated Trustees. This provides legal backing for your charitable or religious activities.</p>
+                </div>
+                </div>
+
+                {/* col */}
+                      <div className="mt-10 grid grid-col md:grid-cols-3">
+                        <div>box1</div>
+
+                      </div>
+
+            </div>
              
     <Footer/>
     </section>
