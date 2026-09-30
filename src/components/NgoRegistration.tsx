@@ -11,6 +11,8 @@ const NgoRegistration = () => {
   return (
     <section id="NgoRegistration">
       <Header/>
+
+                    {/* HERO SECTION */}
       <div className="px-5 md:px-10 lg:px-20 py-38">
         <div className="lg:w-1/2">
         <div className="inline-flex gap-3 bg-amber-300 rounded-xl p-1">
@@ -55,34 +57,54 @@ const NgoRegistration = () => {
                 </div>
 
                       {/* col */}
-                      <div className="mt-10 grid grid-col md:grid-cols-3">
+                      <div className="mt-10 grid grid-col md:grid-cols-3 gap-10">
                             {/* box 1 */}
-                        <div>
-                          <HandCoins />
-                          <h4>RECIEVE GRANT</h4>
-                          <p>International donors and government agencies only fund legally recognized NGOs with an official CAC certificate and corporate bank account.</p>
+                        <div className="bg-white rounded-3xl p-4">
+                          <HandCoins className="mt-3" />
+                          <h4 className="font-bold mt-3">RECIEVE GRANT</h4>
+                          <p className='mt-3'>International donors and government agencies only fund legally recognized NGOs with an official CAC certificate and corporate bank account.</p>
                         </div>
                          {/* box 2 */}
-                        <div>
-                          <ShieldPlus />
-                          <h4>LEGAL PROTECTION</h4>
-                          <p>The Trustees gain limited liability protection, meaning their personal assets are protected while executing the organization's goals.</p>
+                        <div className="bg-white rounded-3xl p-4">
+                          <ShieldPlus className="mt-3"/>
+                          <h4 className="font-bold mt-3">LEGAL PROTECTION</h4>
+                          <p className='mt-3'>The Trustees gain limited liability protection, meaning their personal assets are protected while executing the organization's goals.</p>
                         </div>
 
                          {/* box 3 */}
-                        <div>
-                           <Globe />
-                           <h4>PUBLIC TRUST</h4>
-                           <p>Having a CAC certificate immediately builds immense trust with the public, volunteers, and potential financial partners.</p>
+                        <div className="bg-white rounded-3xl p-4">
+                           <Globe className="mt-3"/>
+                           <h4 className="font-bold mt-3">PUBLIC TRUST</h4>
+                           <p className='mt-3'>Having a CAC certificate immediately builds immense trust with the public, volunteers, and potential financial partners.</p>
                         </div>
                       </div>
 
-
-                </div>
+                      <div className="mt-20 max-w-7xl text-center px-5 md:px-10 lg:px-20">
+                        <h1 className="text-xl md:text-3xl lg:text-5xl font-extrabold text-green-700">FREQUENTLY ASKED QUESTIONS</h1>
+                        <div className="grid grid-rows-3 gap-5 text-xl">
+                                {/* box 1 */}
+                            <div className="mt-3 rounded-3xl p-5 bg-white ">
+                              <h2 className="mt-3 text-green-400 font-extrabold">How many Trustees do I need?</h2>
+                              <p className="mt-3">To register an NGO or Church, you need a minimum of two (2) Trustees who are trustworthy adults without any criminal record.</p>
+                              </div>
+                              
+                              {/* box 2*/}
+                            <div className="mt-3 rounded-3xl p-5 bg-white">
+                              <h2 className="mt-3 text-green-400 font-extrabold">How long does NGO registration take?</h2>
+                              <p className="mt-3">Due to the mandatory 28-day newspaper publication period required by law, the entire process from name approval to final certificate usually takes between 1.5 to 2 months.</p>
+                            </div>
+                              {/* box 3 */}
+                            <div className="mt-3 rounded-3xl p-5 bg-white">
+                              <h2 className="mt-3 text-green-500 font-extrabold">Do NGOs pay tax in Nigeria?</h2>
+                              <p className="mt-3">NGOs are generally exempt from Company Income Tax (CIT) on their charitable activities. However, they are still required to register for a TIN and file annual returns.</p>
+                              </div>
+                        </div>
+                      </div>
+                      </div>
             </div>
-             
+      <WhatsaAppButton/>       
     <Footer/>
-    </section>
+  </section>
   )
 }
 
