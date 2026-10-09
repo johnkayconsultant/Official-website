@@ -44,7 +44,7 @@ if (!isFormData.fullName.trim()) {
 }
 
   // WhatsApp validation
-  const whatsappRegex = /^(?:\+234|234|0)8[0-9]{9}$/;
+ const whatsappRegex = /^(?:\+234|234|0)[789][0-9]{9}$/;
 
   if (!isFormData.whatsapp.trim()) {
     newErrors.whatsapp = "WhatsApp number is required";
