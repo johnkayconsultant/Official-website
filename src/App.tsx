@@ -10,6 +10,7 @@ import BusinessNameRegistration from "./components/BusinessNameRegistration";
 import CompanyNameRegistration from "./components/CompanyNameRegistration";
 import NgoRegistration from "./components/NgoRegistration";
 import WhatsaAppButton from "./components/WhatsaAppButton";
+// import CompanyWhatsapp from "./components/companyWhatsapp";
 
 
  
@@ -29,6 +30,7 @@ function App() {
       <Route path="/CompanyNameRegistration" element={<CompanyNameRegistration />} /> 
       <Route path="/ngo-registration" element={<NgoRegistration />} />
       <Route path="/WhatsaAppButton" element={<WhatsaAppButton/>}/>
+      {/* <Route path="/CompanyWhatsapp" element={<CompanyWhatsapp/>}/> */}
 
 
       {/* //NOT FOUND PAGE */}

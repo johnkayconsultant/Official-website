@@ -103,7 +103,7 @@ const Footer = () => {
                   <FaFacebookF className="w-7 h-7" />
                 </a>
 
-                <a href="#">
+                <a href="https://wa.me/2349058500368?text=I need more information about the Registration">
                   <RiWhatsappLine className="w-7 h-7" />
                 </a>
 

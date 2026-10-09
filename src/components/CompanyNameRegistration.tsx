@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import WhatsaAppButton from "@/components/WhatsaAppButton";
 import {Link} from "react-router-dom";
 import Footer from "@/components/Footer";
+// import CompanyWhatsapp from '@/components/companyWhatsapp';
 
 const CompanyNameRegistration = () => {
   return (
@@ -21,7 +22,7 @@ const CompanyNameRegistration = () => {
           <p className="mt-8">The gold standard for scaling businesses in Nigeria. Protect your personal assets, secure massive government contracts, and attract global investors with a Private Limited Liability Company.</p>
 
           <div className="mt-10">
-            <Link to="/WhatsaAppButton">
+            <Link to="/Contact">
           <span className="bg-amber-400 rounded-xl p-5 font-extrabold  hover:bg-green-500" >
             <button type="submit">
            <div className=" inline-flex gap-2">
@@ -76,7 +77,7 @@ const CompanyNameRegistration = () => {
         
         
 
-     
+     <WhatsaAppButton/>
       <Footer/>
     </section>
   )

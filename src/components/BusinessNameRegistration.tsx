@@ -25,7 +25,7 @@ const BusinessNameRegistration = () => {
     <p className="mt-5">Don't lose your brand name to a competitor. A formal Business Name Registration with CAC grants you the legal right to operate, open a corporate bank account, and build lasting trust with your customers across Nigeria.</p>
 
     <div className="mt-15">
-      <Link to="/WhatsAppButton">
+      <Link to="/Contact">
     <span className="bg-amber-400 p-5 rounded-xl font-extrabold shadow-amber-600 hover:bg-blue-600">
       <button type="submit">
           <div className='inline-flex gap-2'>

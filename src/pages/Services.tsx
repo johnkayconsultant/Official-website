@@ -68,7 +68,7 @@ const Services = () => {
             <h4 className="text-xl mt-4 font-extrabold">Register a Limited Company (LLC)</h4>
             <p className='mt-4'>Protect your personal assets, secure massive government contracts, and attract global investors with a Private Limited Liability Company.</p>
             <div className='mt-4 flex md:flex-row gap-3'>
-                <div className='font-bold text-white'>
+                <div className='text-green-700 font-extrabold'>
                           View Service detail
                       </div>
                       <div className="mt-1">
@@ -81,13 +81,13 @@ const Services = () => {
           </Link>
 
           {/* Incorporated Trustees Experts */}
-          <Link to="/NgoRegistration">
+          <Link to="/ngo-registration">
               <div className="mt-10  bg-green-200 border-b-4 p-8 rounded-4xl">
             <Briefcase className='w-10 h-10' />
             <h4 className="text-xl mt-4 font-extrabold">Incorporated Trustees</h4>
             <p className='mt-4'>Establish your Foundation, NGO, Church, Mosque, or Association legally in Nigeria as Incorporated Trustees. We handle the complex newspaper publications and Trustee verifications so you can focus on your mission.</p>
             <div className='mt-4 flex md:flex-row gap-3'>
-                <div className='font-bold text-white'>
+                <div className='font-extrabold text-green-900'>
                           View Service detail
                       </div>
                       <div className="mt-1">
