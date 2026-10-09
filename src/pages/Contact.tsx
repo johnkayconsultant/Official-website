@@ -32,7 +32,16 @@ const Contact = () => {
     message: "",
   };
 
+
  // Full name validation
+//  Understand the regex
+// ^(?:\+234|234|0)[789][0-9]{9}$/
+//  ^ — starts checking from the beginning of the input.
+// (?:\+234|234|0) — accepts the prefix +234, 234, or 0.
+// [789] — requires the next digit to be 7, 8, or 9.
+// [0-9]{9} — requires exactly nine more digits.
+// $ — ends checking at the end of the input.
+// important: This validates the phone-number format, not whether the number is actually registered on WhatsApp.
 const fullNameRegex = /^[A-Za-z\s]+$/;
 
 if (!isFormData.fullName.trim()) {
